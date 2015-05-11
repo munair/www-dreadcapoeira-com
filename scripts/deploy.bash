@@ -22,6 +22,7 @@ cat ~/.netrc | grep heroku || heroku login && heroku keys:add ~/.ssh/id_rsa.pub
 heroku apps:destroy www-capoeirastudio-com --confirm www-capoeirastudio-com
 heroku apps:create www-capoeirastudio-com
 heroku domains:add www.capoeirastudio.com --app www-capoeirastudio-com
+heroku domains:add capoeirastudio.com --app www-capoeirastudio-com
 heroku git:remote -a www-capoeirastudio-com -r production-heroku
 git push production-heroku master:master
 git checkout development
