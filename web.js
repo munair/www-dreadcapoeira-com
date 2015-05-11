@@ -12,7 +12,7 @@ app.use("/ko", express.static(__dirname + '/ko'));
 app.use("/en", express.static(__dirname + '/en'));
 app.use("/less", express.static(__dirname + '/less'));
 
-app.get('/', function(request, response) { var htmlBuffer = fs.readFileSync('ko/index.html', 'utf-8'); response.send(htmlBuffer); });
+app.get('/', function(request, response) { var htmlBuffer = fs.readFileSync('en/index.html', 'utf-8'); response.send(htmlBuffer); });
 app.get('/ko', function(request, response) { var htmlBuffer = fs.readFileSync('ko/index.html', 'utf-8'); response.send(htmlBuffer); });
 app.get('/en', function(request, response) { var htmlBuffer = fs.readFileSync('en/index.html', 'utf-8'); response.send(htmlBuffer); });
 
